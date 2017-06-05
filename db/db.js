@@ -9,9 +9,14 @@ mongoose.connect(uristring,function(err,res){
 })
 
 var userSchema = new mongoose.Schema({
-    id: Number,
     name: String
+    
 });
 
-var City = mongoose.model('Users', userSchema);
+var User = mongoose.model('users', userSchema);
+
+
+module.exports = {
+    User: User
+}
 
